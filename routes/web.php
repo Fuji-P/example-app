@@ -39,3 +39,6 @@ Route::put('/tweet/update/{tweetId}', \App\Http\Controllers\Tweet\Update\PutCont
 
 Route::delete('/tweet/delete/{tweetId}', \App\Http\Controllers\Tweet\DeleteController::class)
 ->name('tweet.delete');
+
+Route::get('/tweet', \App\Http\Controllers\Tweet\IndexController::class)
+->name('tweet.index');
