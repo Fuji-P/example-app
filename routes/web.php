@@ -42,3 +42,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/tweet/delete/{tweetId}', \App\Http\Controllers\Tweet\DeleteController::class)
     ->name('tweet.delete');
 });
+
+Route::get('/dashboard', function() {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
