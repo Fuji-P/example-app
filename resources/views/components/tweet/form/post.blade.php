@@ -1,6 +1,6 @@
 @auth
 	<div class="p-4">
-		<form action="{{ route('tweet.create') }}" method="post">
+		<form action="{{ route('tweet.create') }}" method="post" enctype="multipart/form-data">
 			@csrf
 			<div class="mt1">
 				<textarea
@@ -21,6 +21,7 @@
 			<p class="mt-2 text-sm text-gray-500">
 				140字まで
 			</p>
+			<x-tweet.form.images></x-tweet.form.images>
 
 			@error('tweet')
 			<x-alert.error>{{ $message }}</x-alert.error>
