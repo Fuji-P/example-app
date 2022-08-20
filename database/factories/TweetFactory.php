@@ -20,7 +20,7 @@ class TweetFactory extends Factory
         return [
             'user_id' => 1, //つぶやきを投稿したユーザーのIDをデフォルトで1とする
             'content' => $this->faker->realText(100),
-            'creates_at' => Carbon::now()->yesterday()
+            'created_at' => Carbon::now()->yesterday()
         ];
     }
 }
