@@ -16,7 +16,6 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request, TweetService $tweetService)
     {
-        $tweetService = new TweetService();     //TweetServiceのインスタンスを作成
         $tweets = $tweetService->getTweets();   //つぶやきの一覧を取得
         return view('tweet.index')
             ->with('tweets', $tweets);
